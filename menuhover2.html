@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <title>Code Smashers</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        nav{
+            height: 100px;
+            background-color: #81ecec;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .logo{
+            width: 40%;
+            color: #0984e3;
+            text-shadow: 2px 2px 2px #dfe6e9;
+            padding-left: 55px;
+        }
+        .menu{
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu a{
+            text-decoration: none;
+            color: #2d3436;
+            text-transform: uppercase;
+            font-weight: bold;
+            position: relative;
+        }
+        .menu a::before{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: #000;
+            transition: all 0.5s linear;
+        }
+        .menu a::after{
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background-color: #000;
+            transition: all 0.5s linear;
+        }
+        .menu a:hover::before{
+            width: 100%;
+            background-color: #0984e3;
+        }
+        .menu a:hover::after{
+            width: 100%;
+            background-color: #0984e3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Code Smashers</h1>
+        </div>
+
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Gallery</a>
+            <a href="#">Portfolio</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+</body>
+</html>
