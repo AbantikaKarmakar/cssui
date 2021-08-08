@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3a5761e46b.js" crossorigin="anonymous"></script>
+    <title>Icon Hover Effect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #0984e3;
+            position: relative;
+        }
+        i{
+            color: #0984e3;
+        }
+        ul li::before{
+            content:"";
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background-color: #0984e3;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.3s linear;
+            z-index: -1;
+        }
+        ul li::after{
+            content:"";
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border: 2px dashed #0984e3;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.3s linear;
+        }
+        ul li:hover::before{
+            transform: scale(0.8);
+            opacity: 1;
+        }
+        ul li:hover::after{
+            animation: rotates 11s linear infinite;
+            opacity: 1;
+        }
+        ul li:hover i{
+            color: white;
+        }
+        @keyframes rotates{
+            0%{
+                transform: scale(0.9) rotate(0deg);
+            }
+            100%{
+                transform: scale(0.9) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><i class="fas fa-3x fa-heart"></i></li>
+            <li><i class="fas fa-3x fa-globe"></i></li>
+            <li><i class="fas fa-3x fa-gift"></i></li>
+            <li><i class="fas fa-3x fa-star"></i></li>
+        </ul>
+    </div>
+</body>
+</html>

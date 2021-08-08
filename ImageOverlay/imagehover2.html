@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <title>Image Overlay</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        div{
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        figure{
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        img{
+            height: 400px;
+            transition: all 0.5s linear;
+        }
+        figcaption{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.7s linear;
+        }
+        figcaption p{
+            padding-top: 20px;
+        }
+        figure:hover img{
+            transform: scale(1.3);
+        }
+        figure:hover figcaption{
+            opacity: 1;
+            background: rgba(0,0,0,0.7);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <figure>
+            <img src="./michael-browk-WXdnj6QVAl4-unsplash.jpg" alt="">
+            <figcaption>
+                <h1>We are Awesome.</h1>
+                <p>God Bless You!</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="./peter-jan-rijpkema-wI6o8OwUwdw-unsplash.jpg" alt="">
+            <figcaption>
+                <h1>Life is Beautiful.</h1>
+                <p>So are You!</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="./ravi-sharma-cO9_joZ1FdA-unsplash.jpg" alt="">
+            <figcaption>
+                <h1>Live the Moment.</h1>
+                <p>Adore the Present!</p>
+            </figcaption>
+        </figure>
+    </div>
+</body>
+</html>
